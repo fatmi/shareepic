@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+
+      </div>
+      <div *ngIf="isLoggedIn">
+        <p class="navbar-text navbar-right">Logged In: {{user_displayName}} ({{user_email}})<p>
+      </div>
+
+      <div *ngIf="!isLoggedIn">
+        <p class="navbar-text navbar-right">Logged Out</p>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-md-1-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!--<div class="container">
+  <div class="row">
+    <div class="col-md-1-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>-->
